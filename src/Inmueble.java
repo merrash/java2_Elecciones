@@ -2,9 +2,9 @@ public class Inmueble
 {
 
 	private int id;
-	private String tipo;
+	private String tipo;//vivienda, oficina
 	private String direccion;
-	private int metros;
+	private int metros;//
 	
 
 	public Inmueble(int i, String t, String d, int m)
@@ -31,7 +31,7 @@ public class Inmueble
 	}
 	public String getTipo()
 	{
-		return apellido;
+		return tipo;
 	}
 
 	public void setDireccion(String d)
@@ -40,7 +40,7 @@ public class Inmueble
 	}
 	public String getDireccion()
 	{
-		return dni;
+		return direccion;
 	}
 
 	public void setMetros(int m)

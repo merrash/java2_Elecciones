@@ -61,7 +61,7 @@ public class Habitante
 	{
 		this.sexo=s;
 	}
-	public String getSexo()
+	public char getSexo()
 	{
 		return sexo;
 	}
