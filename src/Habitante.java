@@ -1,15 +1,14 @@
 public class Habitante
 {
-
-	private String nombre;
+	public String nombre;
 	private String apellido;
 	private String dni;
 	private int edad;
-	private char sexo;
+	private String sexo;
 	private int telefono;
 	private String poblacion;
 
-	public Habitante(String n, String a, String d, int e, char s, int t, String p)
+	public Habitante(String n, String a, String d, int e, String s, int t, String p)
 	{
 		nombre=n;
 		apellido=a;
@@ -57,11 +56,11 @@ public class Habitante
 		return edad;
 	}
 
-	public void setSexo(char s)
+	public void setSexo(String s)
 	{
 		this.sexo=s;
 	}
-	public char getSexo()
+	public String getSexo()
 	{
 		return sexo;
 	}

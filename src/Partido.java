@@ -33,7 +33,7 @@ public class Partido
 	{
 		this.nombre=n;
 	}
-	public String getnombre()
+	public String getNombre()
 	{
 		return nombre;
 	}
