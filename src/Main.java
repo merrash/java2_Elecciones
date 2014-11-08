@@ -15,16 +15,16 @@ public class Main
 	public static void main (String args[]) 
 	{
 	
-	int num;
-	String cadena;
-	//char caracter;
+		int num;
+		String cadena;
+		//char caracter;
 
-	Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 
-File archivo = null;
-      FileReader lector = null;
-      BufferedReader bufer = null;
-/*
+		File archivo = null;
+    	FileReader lector = null;
+    	BufferedReader bufer = null;
+			/*
 
 			//*****HABITANTE*****
 
@@ -69,7 +69,7 @@ File archivo = null;
 		System.out.print("\nLa poblacion del habitante es: " + habitante.getPoblacion()+ "\n");//recoge el nombre del habitante
 
 
-//*****INMUEBLE*****
+		//*****INMUEBLE*****
 
 		Inmueble inmueble = new Inmueble(1234,"feo","1234feo",1234);
 
@@ -101,7 +101,7 @@ File archivo = null;
 
 
 
-//*****ESPACIO PUBLICO*****
+		//*****ESPACIO PUBLICO*****
 
 		EspacioPublico espaciopublico = new EspacioPublico(1234,"feo","1234feo","feo",1234);
 
@@ -137,7 +137,7 @@ File archivo = null;
 		
 
 
-//*****AYUNTAMIENTO*****
+		//*****AYUNTAMIENTO*****
 
 		Ayuntamiento ayuntamiento = new Ayuntamiento(1234,"feo","1234feo","feo");
 
@@ -167,7 +167,7 @@ File archivo = null;
 
 
 
-//*****PARTIDO*****
+		//*****PARTIDO*****
 
 		Partido partido = new Partido(1,"feo","feo",1,"1234feo",1234);
 
@@ -204,29 +204,42 @@ File archivo = null;
 		System.out.print("\nEl tipo de partido es: " + partido.getTipo()+ "\n");//recoge el nombre del habitante
 		System.out.print("\nEl numero de votos obtenido es: " + partido.getVotos()+ "\n");//recoge el nombre del habitante
 		
-*/
+		*/
 
 		try
-		{// Apertura del fichero y creacion de BufferedReader para poder
-         // hacer una lectura comoda (disponer del metodo readLine()).
-         archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
-         lector = new FileReader (archivo);
-         bufer = new BufferedReader(lector);
+		{
+		// Apertura del fichero y creacion de BufferedReader para poder
+        // hacer una lectura comoda (disponer del metodo readLine()).
+        	archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
+        	lector = new FileReader (archivo);
+        	bufer = new BufferedReader(lector);
  
-         // Lectura del fichero
-         int i=0;
+        	// Lectura del fichero
+        	//int i=0;
          
-         ArrayList lista = new ArrayList() ; 
+        	ArrayList lista = new ArrayList() ; 
 			
-			lista.add(bufer.readLine());
 
-         while(bufer.readLine()!=null)
-			lista.add(bufer.readLine());
-            
+			int i;
+        	/*while(bufer.readLine()!=null)
+        	{
 
-            for (i=0; i < lista.size();i++) // int size() El tamaño actual 
-		//imprime el valor de la lista en la posicion i
-		System.out.println(lista.get(i) + " " ) ; 
+
+         		lista.add(i, bufer.readLine());
+         		
+						//imprime el valor de la lista en la posicion i
+						System.out.println(lista.get(i)) ; 
+						i++;
+				
+			}*/
+			for (i=0; bufer.readLine()!=null;i++) // int size() El tamaño actual 
+				{
+			//imprime el valor de la lista en la posicion i
+					lista.add(i, bufer.readLine());
+			System.out.println(lista.get(i)) ; 	}		
+
+
+
         }
         
         catch(Exception e)
