@@ -236,9 +236,12 @@ public class Main
 				{
 			//imprime el valor de la lista en la posicion i
 					lista.add(i, bufer.readLine());
-			System.out.println(lista.get(i)) ; 	}		
+			System.out.println(lista.get(i)) ; 	}	
 
 
+			lista.clear();
+
+			System.out.println("despues del vaciado del arraylist:" + lista.size()) ; 		
 
         }
         
