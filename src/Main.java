@@ -220,29 +220,29 @@ public class Main
         	ArrayList lista = new ArrayList() ; 
 			
 
-			int i;
-        	/*while(bufer.readLine()!=null)
-        	{
+			int i=0;
 
+			String fila= bufer.readLine();
+			lista.add(fila);
+        	
 
-         		lista.add(i, bufer.readLine());
-         		
-						//imprime el valor de la lista en la posicion i
-						System.out.println(lista.get(i)) ; 
-						i++;
-				
-			}*/
-			for (i=0; bufer.readLine()!=null;i++) // int size() El tamaño actual 
-				{
-			//imprime el valor de la lista en la posicion i
-					lista.add(i, bufer.readLine());
-			System.out.println(lista.get(i)) ; 	}	
+       
+            while (fila != null) 
+            {
 
-			System.out.println("antes del vaciado del arraylist:" + lista.size() + "elementos") ; 		
+ 
+                System.out.println(lista.get(i));
+                i++;
+                fila = bufer.readLine();
+                lista.add(fila);
+
+            }
+
+			System.out.println("antes del vaciado del arraylist:" + (lista.size()-1) + "elementos") ; 		
 
 			lista.clear();
 
-			System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 		
+			System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 
 
         }
         
