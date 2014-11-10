@@ -238,10 +238,11 @@ public class Main
 					lista.add(i, bufer.readLine());
 			System.out.println(lista.get(i)) ; 	}	
 
+			System.out.println("antes del vaciado del arraylist:" + lista.size() + "elementos") ; 		
 
 			lista.clear();
 
-			System.out.println("despues del vaciado del arraylist:" + lista.size()) ; 		
+			System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 		
 
         }
         
