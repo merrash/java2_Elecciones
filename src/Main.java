@@ -212,21 +212,40 @@ public class Main
         	BufferedReader bufer = new BufferedReader(lector);
  
         	         
-        	//ArrayList <Partido> partido = new ArrayList <Partido>() ; 
+        	ArrayList <Partido> partido = new ArrayList <Partido>() ; 
         	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
-        	ArrayList <String> lista = new ArrayList <String>() ; 
+        	//ArrayList <String> lista = new ArrayList <String>() ; 
 			
-/*String fila= bufer.readLine();
-partido.id=fila;
-String fila= bufer.readLine();
-partido.nombre=fila;
-String fila= bufer.readLine();
-partido.siglas=fila;*/
+
 
 			int i=0;
 
-			String fila= bufer.readLine();
+			do{
+
+
+ 			String concoma = bufer.readLine();//obtenemos la linea
+
+			String[] separadas = concoma.split(",");//asigno al array los atributos de la fila leida sin comas
+
+			Partido aux = new Partido(0,"","",0,"");
 			
+
+
+			//ponemos los datos en los atributos del objeto
+			aux.setId(Integer.parseInt(separadas[0]));
+			aux.setNombre(separadas[1]);
+			aux.setSiglas(separadas[2]);
+			aux.setAfiliados(Integer.parseInt(separadas[3]));
+			aux.setSecretario(separadas[4]);
+
+			//añadimos el objeto aux al ArrayList
+			partido.add(aux);
+			
+			}
+			while (bufer.readLine() != null);
+			
+System.out.println(partido(0));
+			/*
 			lista.add(fila);
         	
 
@@ -241,13 +260,15 @@ partido.siglas=fila;*/
                 lista.add(fila);
 
             }
+            */
 
-		/*	System.out.println("antes del vaciado del arraylist:" + (lista.size()-1) + "elementos") ; 		
+				
+			System.out.println("antes del vaciado del arraylist:" + (partido.size()-1) + "elementos") ; 		
 
-			lista.clear();
+			//lista.clear();
 
-			System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 
-		*/
+			//System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 
+			
 
         }
         
