@@ -5,18 +5,16 @@ public class Partido
 	private String nombre;//nombre del partido
 	private String siglas;//siglas de partido
 	private int afiliados;//numero de afiliados en el partido
-	private String tipo;//derechas, izquierdas
-	private int votos;//numero de votos conseguidos
-	
+	private String secretario;//nombre del secretario general del partido
+		
 
-	public Partido(int i, String n, String s, int a, String t,int v)
+	public Partido(int i, String n, String s, int a, String se)
 	{
 		id=i;
 		nombre=n;
 		siglas=s;
 		afiliados=a;
-		tipo=t;
-		votos=v;
+		secretario=se;
 	}
 
 	
@@ -56,20 +54,13 @@ public class Partido
 	{
 		return afiliados;
 	}
-	public void setTipo(String t)
+	public void setSecretario(String se)
 	{
-		this.tipo=t;
+		this.secretario=se;
 	}
-	public String getTipo()
+	public String getSecretario()
 	{
-		return tipo;
+		return secretario;
 	}
-	public void setVotos(int v)
-	{
-		this.votos=v;
-	}
-	public int getVotos()
-	{
-		return votos;
-	}
+	
 }

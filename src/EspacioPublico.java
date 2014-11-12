@@ -2,15 +2,17 @@ public class EspacioPublico
 {
 
 	private int id;
+	private String nombre;//nombre del espacio publico
 	private String tipo;//vivienda, oficina
 	private String direccion;
 	private String poblacion;
 	private int metros;//
 	
 
-	public EspacioPublico(int i, String t, String d, String p, int m)
+	public EspacioPublico(int i, String n, String t, String d, String p, int m)
 	{
 		id=i;
+		nombre=n;
 		tipo=t;
 		direccion=d;
 		poblacion=p;
@@ -25,6 +27,15 @@ public class EspacioPublico
 	public int getId()
 	{
 		return id;
+	}
+
+	public void setNombre(String n)
+	{
+		this.nombre=n;
+	}
+	public String getNombre()
+	{
+		return nombre;
 	}
 
 	public void setTipo(String t)
