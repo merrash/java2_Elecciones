@@ -211,41 +211,41 @@ public class Main
         	FileReader lector = new FileReader (archivo);
         	BufferedReader bufer = new BufferedReader(lector);
  
-        	   
+        	
+        	//ArrayList <String> lista = new ArrayList <String>() ;    
         	ArrayList <Partido> partido = new ArrayList <Partido>() ; 
         	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
-        	//ArrayList <String> lista = new ArrayList <String>() ; 
+        	
 			
+			do
+			{     
 
-			 do{     
+ 				String concoma = bufer.readLine();//obtenemos la linea
 
- 			String concoma = bufer.readLine();//obtenemos la linea
+				String[] separadas = concoma.split(",");//asigno al array los atributos de la fila leida sin comas
 
-			String[] separadas = concoma.split(",");//asigno al array los atributos de la fila leida sin comas
-
-			//Partido aux = new Partido(0,"","",0,"");
-			Partido aux = new Partido(Integer.parseInt(separadas[0]),separadas[1],separadas[2],Integer.parseInt(separadas[3]),separadas[4]);
+				//Partido aux = new Partido(0,"","",0,"");
+				Partido aux = new Partido(Integer.parseInt(separadas[0]),separadas[1],separadas[2],Integer.parseInt(separadas[3]),separadas[4]);
 			
-			/*
-			//ponemos los datos en los atributos del objeto
-			aux.setId(Integer.parseInt(separadas[0]));
-			aux.setNombre(separadas[1]);
-			aux.setSiglas(separadas[2]);
-			aux.setAfiliados(Integer.parseInt(separadas[3]));
-			aux.setSecretario(separadas[4]);
-			*/
+				/*
+				//ponemos los datos en los atributos del objeto
+				aux.setId(Integer.parseInt(separadas[0]));
+				aux.setNombre(separadas[1]);
+				aux.setSiglas(separadas[2]);
+				aux.setAfiliados(Integer.parseInt(separadas[3]));
+				aux.setSecretario(separadas[4]);
+				*/
 
-			//añadimos el objeto aux al ArrayList
+				//añadimos el objeto aux al ArrayList
+
+				partido.add(aux);
 
 
-			partido.add(aux);
-
-
-			System.out.println("\nEste es el ID del partido: " + aux.getId());
-			System.out.println("\nNombre del partido: " + aux.getNombre());
-			System.out.println("\nSiglas del partido: " + aux.getSiglas());
-			System.out.println("\nAfiliados del partido: " + aux.getAfiliados());
-			System.out.println("\nSecretario general: " + aux.getSecretario());
+				System.out.println("\nEste es el ID del partido: " + aux.getId());
+				System.out.println("\nNombre del partido: " + aux.getNombre());
+				System.out.println("\nSiglas del partido: " + aux.getSiglas());
+				System.out.println("\nAfiliados del partido: " + aux.getAfiliados());
+				System.out.println("\nSecretario general: " + aux.getSecretario());
 			
 			}
 			while (bufer.readLine() != null);
@@ -265,7 +265,6 @@ public class Main
             while (fila != null) 
             {
 
- 
                 System.out.println(lista.get(i));
                 i++;
                 fila = bufer.readLine();
