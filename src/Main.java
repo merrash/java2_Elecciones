@@ -216,6 +216,12 @@ public class Main
         	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
         	ArrayList <String> lista = new ArrayList <String>() ; 
 			
+/*String fila= bufer.readLine();
+partido.id=fila;
+String fila= bufer.readLine();
+partido.nombre=fila;
+String fila= bufer.readLine();
+partido.siglas=fila;*/
 
 			int i=0;
 
