@@ -244,7 +244,10 @@ public class Main
 			}
 			while (bufer.readLine() != null);
 			
-System.out.println(partido(0));
+			for(i=0;i<partido.size();i++)
+				{System.out.println(partido.get(i));} 
+
+			
 			/*
 			lista.add(fila);
         	
@@ -263,7 +266,7 @@ System.out.println(partido(0));
             */
 
 				
-			System.out.println("antes del vaciado del arraylist:" + (partido.size()-1) + "elementos") ; 		
+			//System.out.println("antes del vaciado del arraylist:" + (partido.size()-1) + "elementos") ; 		
 
 			//lista.clear();
 
