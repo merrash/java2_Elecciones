@@ -217,26 +217,23 @@ public class Main
         	//ArrayList <String> lista = new ArrayList <String>() ; 
 			
 
-
-			int i=0;
-
 			do{
-
 
  			String concoma = bufer.readLine();//obtenemos la linea
 
 			String[] separadas = concoma.split(",");//asigno al array los atributos de la fila leida sin comas
 
-			Partido aux = new Partido(0,"","",0,"");
+			//Partido aux = new Partido(0,"","",0,"");
+			Partido aux = new Partido(Integer.parseInt(separadas[0]),separadas[1],separadas[2],Integer.parseInt(separadas[3]),separadas[4]);
 			
-
-
+			/*
 			//ponemos los datos en los atributos del objeto
 			aux.setId(Integer.parseInt(separadas[0]));
 			aux.setNombre(separadas[1]);
 			aux.setSiglas(separadas[2]);
 			aux.setAfiliados(Integer.parseInt(separadas[3]));
 			aux.setSecretario(separadas[4]);
+			*/
 
 			//añadimos el objeto aux al ArrayList
 			partido.add(aux);
@@ -244,8 +241,10 @@ public class Main
 			}
 			while (bufer.readLine() != null);
 			
-			for(i=0;i<partido.size();i++)
-				{System.out.println(partido.get(i));} 
+			for(int i=0;i<partido.size();i++)
+				{
+					System.out.println(partido.get(i));
+				} 
 
 			
 			/*
