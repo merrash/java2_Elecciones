@@ -202,25 +202,24 @@ public class Main
 				
 		*/
 
-		//File archivo = null;
-    	//FileReader lector = null;
-    	//BufferedReader bufer = null;
-
+		
 		try
 		{
 		
-        	File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
+        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
         	FileReader lector = new FileReader (archivo);
         	BufferedReader bufer = new BufferedReader(lector);
  
         	         
-        	ArrayList <Partido> partido = new ArrayList <Partido>() ; 
-        	//ArrayList <String> lista = new ArrayList <String>() ; 
+        	//ArrayList <Partido> partido = new ArrayList <Partido>() ; 
+        	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
+        	ArrayList <String> lista = new ArrayList <String>() ; 
 			
 
 			int i=0;
 
 			String fila= bufer.readLine();
+			
 			lista.add(fila);
         	
 
@@ -236,11 +235,12 @@ public class Main
 
             }
 
-			System.out.println("antes del vaciado del arraylist:" + (lista.size()-1) + "elementos") ; 		
+		/*	System.out.println("antes del vaciado del arraylist:" + (lista.size()-1) + "elementos") ; 		
 
 			lista.clear();
 
 			System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 
+		*/
 
         }
         
