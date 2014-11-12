@@ -211,13 +211,13 @@ public class Main
         	FileReader lector = new FileReader (archivo);
         	BufferedReader bufer = new BufferedReader(lector);
  
-        	         
+        	   
         	ArrayList <Partido> partido = new ArrayList <Partido>() ; 
         	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
         	//ArrayList <String> lista = new ArrayList <String>() ; 
 			
 
-			do{
+			 do{     
 
  			String concoma = bufer.readLine();//obtenemos la linea
 
@@ -236,15 +236,25 @@ public class Main
 			*/
 
 			//añadimos el objeto aux al ArrayList
+
+
 			partido.add(aux);
+
+
+			System.out.println("\nEste es el ID del partido: " + aux.getId());
+			System.out.println("\nNombre del partido: " + aux.getNombre());
+			System.out.println("\nSiglas del partido: " + aux.getSiglas());
+			System.out.println("\nAfiliados del partido: " + aux.getAfiliados());
+			System.out.println("\nSecretario general: " + aux.getSecretario());
 			
 			}
 			while (bufer.readLine() != null);
 			
-			for(int i=0;i<partido.size();i++)
+			/*for(int i=0;i<partido.size();i++)
 				{
 					System.out.println(partido.get(i));
 				} 
+			*/
 
 			
 			/*
