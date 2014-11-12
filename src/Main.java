@@ -206,7 +206,8 @@ public class Main
 		try
 		{
 		
-        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
+        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
+        	File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
         	FileReader lector = new FileReader (archivo);
         	BufferedReader bufer = new BufferedReader(lector);
  
