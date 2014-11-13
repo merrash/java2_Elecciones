@@ -97,7 +97,7 @@ public class Main
 
 
 
-		//*****ESPACIO PUBLICO*****
+		//***************ESPACIO PUBLICO***********************************************************
 
 		EspacioPublico espaciopublico = new EspacioPublico(0,"","","","",0);
 
@@ -168,7 +168,7 @@ public class Main
 
 
 
-		//*****PARTIDO*****
+		//**************PARTIDO*****************************************
 
 		Partido partido = new Partido(0,"","",0,"");
 
@@ -202,83 +202,68 @@ public class Main
 				
 		*/
 
-		
+
+		/*
+		//************LEER ARCHIVO PARTIDO Y GUARDARLO EN EL ARRAYLIST*******************************************
 		try
 		{
 		
-        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
-        	File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/ListadoPartidos.txt");
-        	FileReader lector = new FileReader (archivo);
-        	BufferedReader bufer = new BufferedReader(lector);
- 
+        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
+        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
         	
-        	//ArrayList <String> lista = new ArrayList <String>() ;    
+        	//FileReader lector = new FileReader (archivo);
+        	//BufferedReader bufer = new BufferedReader(lector);
+ 			Scanner linea = new Scanner(archivo);
+        	
+        	//ArrayList <String> lista = new ArrayList <String>() ;
+
+        	//Cremos el objeto Arraylist del tipo partido
         	ArrayList <Partido> partido = new ArrayList <Partido>() ; 
-        	//ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
         	
-			
-			do
+        	
+			while (linea.hasNextLine())
 			{     
 
- 				String concoma = bufer.readLine();//obtenemos la linea
+				//obtenemos la linea
+ 				String concoma = linea.nextLine();
 
-				String[] separadas = concoma.split(",");//asigno al array los atributos de la fila leida sin comas
+ 				//asigno al array los atributos de la fila leida sin comas
+				String[] separadas = concoma.split(",");
 
-				//Partido aux = new Partido(0,"","",0,"");
+				//creamos el nuevo partido y le asignamos los datos obtenido en el String separadas.
 				Partido aux = new Partido(Integer.parseInt(separadas[0]),separadas[1],separadas[2],Integer.parseInt(separadas[3]),separadas[4]);
 			
-				/*
+				//estas sentencias es lo mismo que poner la linea de arriba
+				
 				//ponemos los datos en los atributos del objeto
-				aux.setId(Integer.parseInt(separadas[0]));
-				aux.setNombre(separadas[1]);
-				aux.setSiglas(separadas[2]);
-				aux.setAfiliados(Integer.parseInt(separadas[3]));
-				aux.setSecretario(separadas[4]);
-				*/
+				//aux.setId(Integer.parseInt(separadas[0]));
+				//aux.setNombre(separadas[1]);
+				///aux.setSiglas(separadas[2]);
+				//aux.setAfiliados(Integer.parseInt(separadas[3]));
+				//aux.setSecretario(separadas[4]);
+				
 
 				//añadimos el objeto aux al ArrayList
-
 				partido.add(aux);
 
-
+				//obtenemos los datos del ultimo partido añadido
 				System.out.println("\nEste es el ID del partido: " + aux.getId());
 				System.out.println("\nNombre del partido: " + aux.getNombre());
 				System.out.println("\nSiglas del partido: " + aux.getSiglas());
 				System.out.println("\nAfiliados del partido: " + aux.getAfiliados());
-				System.out.println("\nSecretario general: " + aux.getSecretario());
+				System.out.println("\nSecretario general: " + aux.getSecretario() + "\n");
 			
 			}
-			while (bufer.readLine() != null);
-			
-			/*for(int i=0;i<partido.size();i++)
-				{
-					System.out.println(partido.get(i));
-				} 
-			*/
+						
+			System.out.println("antes del vaciado del arraylist PARTIDO:" + (partido.size()-1) + "elementos") ; 		
+			System.out.println("antes del vaciado del arraylist AUX:" + (aux.size()-1) + "elementos") ; 		
 
-			
-			/*
-			lista.add(fila);
-        	
+			//vaciamos los ArryList
+			partido.clear();
+			aux.clear();
 
-       
-            while (fila != null) 
-            {
-
-                System.out.println(lista.get(i));
-                i++;
-                fila = bufer.readLine();
-                lista.add(fila);
-
-            }
-            */
-
-				
-			//System.out.println("antes del vaciado del arraylist:" + (partido.size()-1) + "elementos") ; 		
-
-			//lista.clear();
-
-			//System.out.println("despues del vaciado del arraylist:" + lista.size() + "elementos") ; 
+			System.out.println("despues del vaciado del arraylist PARTIDO:" + partido.size() + "elementos") ; 
+			System.out.println("despues del vaciado del arraylist AUX:" + aux.size() + "elementos") ; 
 			
 
         }
@@ -287,6 +272,87 @@ public class Main
         {
         	e.printStackTrace();
         }
+        */
 
+
+        //************LEER FICHERO CENSO Y GUARDAR EN ARRAYLIST. IMPRIMIR SOLO A LOS MAYORES DE 18 AÑOS
+
+        try
+		{
+		
+        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/censo.txt");
+        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/censo.txt");
+        	
+        	//FileReader lector = new FileReader (archivo);
+        	//BufferedReader bufer = new BufferedReader(lector);
+ 			Scanner linea = new Scanner(archivo);
+        	
+        	//ArrayList <String> lista = new ArrayList <String>() ;
+
+        	//Cremos el objeto Arraylist del tipo habitante
+        	ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
+        	
+        	
+			while (linea.hasNextLine())
+			{     
+
+				//obtenemos la linea
+ 				String concoma = linea.nextLine();
+
+ 				//asigno al array los atributos de la fila leida sin comas
+				String[] separadas = concoma.split(",");
+
+				//creamos el nuevo partido y le asignamos los datos obtenido en el String separadas.
+				Habitante aux = new Habitante(separadas[0],separadas[1],separadas[2],Integer.parseInt(separadas[3]),separadas[4],Integer.parseInt(separadas[5]),separadas[6]);
+			
+				//estas sentencias es lo mismo que poner la linea de arriba
+				/*
+				//ponemos los datos en los atributos del objeto
+				aux.setNombre(separadas[0]);
+				aux.setApellido(separadas[1]);
+				aux.setDni(separadas[2]);
+				aux.setEdad(Integer.parseInt(separadas[3]));
+				aux.setSexo(separadas[4]);
+				aux.setTelefono(Integer.parseInt(separadas[5]));
+				aux.setPoblacion(separadas[6]);
+				*/
+
+
+				//Comprobamos si es mayor de edad
+				if (aux.getEdad()>=18)
+				{
+
+					//añadimos el objeto aux al ArrayList
+					habitante.add(aux);
+
+					//obtenemos los datos del ultimo partido añadido
+					System.out.println("\nNombre del habitante: " + aux.getNombre());
+					System.out.println("\nApellido del habitante: " + aux.getApellido());
+					System.out.println("\nDNI del habitante: " + aux.getDni());
+					System.out.println("\nEdad del habitante: " + aux.getEdad());
+					System.out.println("\nSexo del habitante " + aux.getSexo());
+					System.out.println("\nTelefono del habitante: " + aux.getTelefono());
+					System.out.println("\nPoblacion del habitante: " + aux.getPoblacion() + "\n");
+			
+				}
+
+			}/*
+					System.out.println("antes del vaciado del arraylist HABITANTE:" + (habitante.size()-1) + "elementos") ; 		
+					System.out.println("antes del vaciado del arraylist AUX:" + (aux.size()-1) + "elementos") ; 		
+
+					//vaciamos los ArryList
+					habitante.clear();
+					aux.clear();
+
+					System.out.println("despues del vaciado del arraylist HABITANTE:" + habitante.size() + "elementos") ; 
+					System.out.println("despues del vaciado del arraylist AUX:" + aux.size() + "elementos") ; 
+					*/
+
+        }
+        
+        catch(Exception e)
+        {
+        	e.printStackTrace();
+        }
 	}
 }
