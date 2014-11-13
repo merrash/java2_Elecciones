@@ -336,13 +336,12 @@ public class Main
 						
 						}
 								
-						System.out.print("\n****FIN DE LOS PARTIDOS****\n");
-						System.out.println("antes del vaciado del arraylist PARTIDO:" + partido.size() + "elementos") ; 		
+						System.out.println("Numero de partidos politicos en el archivo: " + partido.size()) ; 		
 						
 						//vaciamos los ArryList
 						partido.clear();
 						
-						System.out.println("despues del vaciado del arraylist PARTIDO:" + partido.size() + "elementos") ; 
+						System.out.println("despues del vaciado del arraylist PARTIDO: " + partido.size() + " elementos") ; 
 						
 			        }
 			        
@@ -377,12 +376,13 @@ public class Main
 			        	//Creamos el objeto Arraylist del tipo habitante
 			        	ArrayList <Habitante> habitante = new ArrayList <Habitante>() ; 
 			        	
+			        	int cont=0;
 			        	if (linea.hasNextLine())
 			        		System.out.print("\n****INFORMACION DEL CENSO****\n");
 			        	
 						while (linea.hasNextLine())
 						{     
-
+							cont++;
 							//obtenemos la linea
 			 				String concoma = linea.nextLine();
 
@@ -426,14 +426,16 @@ public class Main
 							}
 
 						}
-								System.out.println("antes del vaciado del arraylist HABITANTE:" + habitante.size() + "elementos") ; 		
+
+								System.out.println("Total de habitantes en el archivo: " + cont) ; 		
+								System.out.println("Habitantes mayores de 18 años: " + habitante.size()) ; 		
 								
 
 								//vaciamos los ArryList
 								habitante.clear();
 								
 
-								System.out.println("despues del vaciado del arraylist HABITANTE:" + habitante.size() + "elementos") ; 
+								System.out.println("despues del vaciado del arraylist HABITANTE: " + habitante.size() + " elementos") ; 
 								
 								
 

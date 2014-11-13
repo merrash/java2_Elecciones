@@ -1,6 +1,6 @@
 Leire,Manjon,13571184J,25,mujer,645332211,Donostia
 Enaut,Gonzalez,72479517D,16,hombre,616374994,Donostia
 Ekaitz,Etxebeste,69453265I,14,hombre,691228563,hernani
-Nekane,Mendizabal,56712345H,18,mujer,675432789,Tolosa
+Nek ane,Mendizabal,56712345H,18,mujer,675432789,Tolosa
 Irati,Arechaga,34518788L,41,mujer,612345621,Tolosa
 Illart,Betelu,67190989Z,20,hombre,623789450,Ordizia
