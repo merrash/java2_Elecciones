@@ -21,28 +21,29 @@ public class Main
 
 		//************************************** MENU ********************************************
 		
-		String mineleccion="", eleccion="";
+		int eleccion=0;
 
 		do
 		{
 			System.out.print("\n\nMENU:");
-			System.out.print("\nAñadir un habitante: (Ahabitante)");
-			System.out.print("\nAñadir un inmueble: (Ainmueble)");
-			System.out.print("\nAñadir un espacio publico: (Aespacio)");
-			System.out.print("\nAñadir un ayuntamiento: (Aayuntamiento)");
-			System.out.print("\nAñadir un partido politico: (Apartido)");
-			System.out.print("\nLeer lista de partidos politicos: (Lpartidos)");
-			System.out.println("\nLeer lista de censo (Lcenso):");
+			System.out.print("\n1.Añadir un habitante");
+			System.out.print("\n2.Añadir un inmueble");
+			System.out.print("\n3.Añadir un espacio publico");
+			System.out.print("\n4.Añadir un ayuntamiento");
+			System.out.print("\n5.Añadir un partido politico");
+			System.out.print("\n6.Leer lista de partidos politicos");
+			System.out.print("\n7.Leer lista de censo");
+			System.out.print("\n8.SALIR");
 
-			System.out.println("\nPara salir escribe: (SALIR):");
+			System.out.println("\nIntroduce el numero de la accion que quieres realizar: ");
 
-			eleccion=sc.next();	
-			mineleccion=eleccion.toLowerCase();
+			eleccion=sc.nextInt();	
 			
+			System.out.println("****************************************************************");
 			
-			switch (mineleccion) 
+			switch (eleccion) 
 			{
-				case "ahabitante":
+				case 1:
 				{
 
 					
@@ -87,6 +88,7 @@ public class Main
 					habitante.setPoblacion(cadena);
 
 					//muestra el contenido de los atributos de Habitante
+					System.out.println("****************************************************************");
 					System.out.print("\n****INFORMACION DEL HABITANTE****\n");
 					System.out.print("\nEl nombre del habitante es: " + habitante.getNombre()+ "");
 					System.out.print("\nEl apellido del habitante es: " + habitante.getApellido()+ "");
@@ -95,13 +97,14 @@ public class Main
 					System.out.print("\nEl sexo del habitante es: " + habitante.getSexo()+ "");
 					System.out.print("\nEl telefono del habitante es: " + habitante.getTelefono()+ "");
 					System.out.print("\nLa poblacion del habitante es: " + habitante.getPoblacion()+ "\n");
-					
+					System.out.println("****************************************************************");
+
 					break;
 
 				}
 				
 
-				case "ainmueble":
+				case 2:
 				{
 
 															
@@ -130,17 +133,19 @@ public class Main
 					inmueble.setMetros(num);
 
 					//muestra el contenido de los atributos de Inmueble
+					System.out.println("****************************************************************");
 					System.out.print("\n****INFORMACION DEL INMUEBLE****\n");
 					System.out.print("\nEl ID del inmueble es: " + inmueble.getId()+ "");
 					System.out.print("\nEl tipo de inmueble es: " + inmueble.getTipo()+ "");
 					System.out.print("\nLa dirrecion del inmueble es: " + inmueble.getDireccion()+ "");
 					System.out.print("\nLos metros del inmueble son: " + inmueble.getMetros()+ "\n");
+					System.out.println("****************************************************************");
 					
 					break;
 				
 				}
 
-				case "aespacio":
+				case 3:
 				{
 
 					
@@ -179,6 +184,7 @@ public class Main
 					espaciopublico.setMetros(num);
 
 					//muestra el contenido de los atributos de EspacioPublico
+					System.out.println("****************************************************************");
 					System.out.print("\n****INFORMACION DEL ESPACIO PUBLICO****\n");
 					System.out.print("\nEl ID del espacio publico es: " + espaciopublico.getId()+ "");
 					System.out.print("\nEl nombre del espacio publico es: " + espaciopublico.getNombre()+ "");
@@ -186,13 +192,14 @@ public class Main
 					System.out.print("\nLa direccion del espacio publico es: " + espaciopublico.getDireccion()+ "");
 					System.out.print("\nLa poblacion del espacio publico es: " + espaciopublico.getPoblacion()+ "");
 					System.out.print("\nLos metros del espacio publico es: " + espaciopublico.getMetros()+ "\n");
+					System.out.println("****************************************************************");
 					
 					break;
 				
 				}
 
 
-				case "aayuntamiento":
+				case 4:
 				{
 
 					
@@ -221,17 +228,19 @@ public class Main
 					ayuntamiento.setNombreAlcalde(cadena);
 
 					//muestra el contenido de los atributos de Ayuntamiento
+					System.out.println("****************************************************************");
 					System.out.print("\n****INFORMACION DEL AYUNTAMIENTO****\n");
 					System.out.print("\nEl ID del ayuntamiento es: " + ayuntamiento.getId()+ "");
 					System.out.print("\nLa poblacion del ayuntamiento es: " + ayuntamiento.getPoblacion()+ "");
 					System.out.print("\nLa direcciondel ayuntamiento es: " + ayuntamiento.getDireccion()+ "");
 					System.out.print("\nEl nombre del alcalde es: " + ayuntamiento.getNombreAlcalde()+ "\n");
+					System.out.println("****************************************************************");
 					
 					break;
 
 				}
 
-				case "apartido":
+				case 5:
 				{
 
 					
@@ -264,18 +273,20 @@ public class Main
 					partido.setSecretario(cadena);
 
 					//muestra el contenido de los atributos de Partido
+					System.out.println("****************************************************************");
 					System.out.print("\n****INFORMACION DEL PARTIDO****\n");	
 					System.out.print("\nEl id del partido es: " + partido.getId()+ "");
 					System.out.print("\nEl nombre del partido es: " + partido.getNombre()+ "");
 					System.out.print("\nLas siglas del partido son" + partido.getSiglas()+ "");
 					System.out.print("\nEl numero de afiliados es: " + partido.getAfiliados()+ "");
 					System.out.print("\nEl nombre del secretario general es: " + partido.getSecretario()+ "\n");
+					System.out.println("****************************************************************");
 							
 					break;
 
 				}
 
-				case "lpartidos":
+				case 6:
 				{
 
 															
@@ -284,8 +295,8 @@ public class Main
 					try
 					{
 					
-			        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
-			        	File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
+			        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
+			        	//File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/listadoPartidos.txt");
 			        	
 			        	//FileReader lector = new FileReader (archivo);
 			        	//BufferedReader bufer = new BufferedReader(lector);
@@ -333,6 +344,7 @@ public class Main
 							System.out.println("Siglas del partido: " + aux.getSiglas());
 							System.out.println("Afiliados del partido: " + aux.getAfiliados());
 							System.out.println("Secretario general: " + aux.getSecretario() + "\n");
+							System.out.println("****************************************************************");
 						
 						}
 								
@@ -341,7 +353,8 @@ public class Main
 						//vaciamos los ArryList
 						partido.clear();
 						
-						System.out.println("despues del vaciado del arraylist PARTIDO: " + partido.size() + " elementos") ; 
+						System.out.println("despues del vaciado del arraylist PARTIDO: " + partido.size() + " elementos") ;
+						System.out.println("****************************************************************");
 						
 			        }
 			        
@@ -355,7 +368,7 @@ public class Main
 		    	}
 
 
-				case "lcenso":
+				case 7:
 				{
 
 					
@@ -364,8 +377,8 @@ public class Main
 			        try
 					{
 					
-			        	//File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/censo.txt");
-			        	File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/censo.txt");
+			        	File archivo = new File ("/home/zubiri/ProyectosJava/java2_Elecciones/src/censo.txt");
+			        	//File archivo = new File ("/home/ibalenciaga/ProyectosJava/java2_Elecciones/src/censo.txt");
 			        	
 			        	//FileReader lector = new FileReader (archivo);
 			        	//BufferedReader bufer = new BufferedReader(lector);
@@ -415,6 +428,7 @@ public class Main
 								habitante.add(aux);
 
 								//obtenemos los datos del ultimo habitante añadido
+								System.out.println("****************************************************************");
 								System.out.println("Nombre del habitante: " + aux.getNombre());
 								System.out.println("Apellido del habitante: " + aux.getApellido());
 								System.out.println("DNI del habitante: " + aux.getDni());
@@ -422,20 +436,21 @@ public class Main
 								System.out.println("Sexo del habitante " + aux.getSexo());
 								System.out.println("Telefono del habitante: " + aux.getTelefono());
 								System.out.println("Poblacion del habitante: " + aux.getPoblacion() + "\n");
+								System.out.println("****************************************************************");
 						
 							}
 
 						}
 
-								System.out.println("Total de habitantes en el archivo: " + cont) ; 		
-								System.out.println("Habitantes mayores de 18 años: " + habitante.size()) ; 		
-								
+								System.out.println("Total de habitantes en el archivo: " + cont) ;
+								System.out.println("Habitantes mayores de 18 años: " + habitante.size()) ;
+								System.out.println("****************************************************************");								
 
 								//vaciamos los ArryList
 								habitante.clear();
 								
-
-								System.out.println("despues del vaciado del arraylist HABITANTE: " + habitante.size() + " elementos") ; 
+								System.out.println("despues del vaciado del arraylist HABITANTE: " + habitante.size() + " elementos") ;
+								System.out.println("****************************************************************");
 								
 								
 
@@ -450,7 +465,7 @@ public class Main
 
 		    	}
 
-		    	case "salir":
+		    	case 8:
 		    		
 		    		break;
 
@@ -459,6 +474,6 @@ public class Main
 
 		    }
 	    
-	    }while(!eleccion.equalsIgnoreCase("salir"));
+	    }while(eleccion != 8);
 	}
 }
